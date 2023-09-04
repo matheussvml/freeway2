@@ -20,6 +20,8 @@ func _on_HoraCarroRapido_timeout():
 	CarroRapido.position.x = -10
 	CarroRapido.position.y = PistaRapida[randi() % PistaRapida.size()]
 	CarroRapido.linear_velocity = Vector2(rand_range(700,710),0)
+	CarroRapido.position.x = 1400
+	CarroRapido.linear_velocity = Vector2(rand_range(-700,-710),0)
 
 
 func _on_HoraCarroDevagar_timeout():
@@ -51,7 +53,7 @@ func _on_Player2_pontua2():
 		Score2 += 1
 		$ponto.play()
 		$placar2.text = str(Score2)
-	if Score2 >= 5:
+	if Score2 >= 1:
 		$Button.show()
 		$tema.stop()
 		$resultado.text = "Player 2 Ganhou"
