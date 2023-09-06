@@ -53,7 +53,7 @@ func _on_Player2_pontua2():
 		Score2 += 1
 		$ponto.play()
 		$placar2.text = str(Score2)
-	if Score2 >= 5:
+	if Score2 >= 1:
 		$Button.show()
 		$tema.stop()
 		$resultado.text = "Player 2 Ganhou"
